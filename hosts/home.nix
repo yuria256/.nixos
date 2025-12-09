@@ -20,6 +20,17 @@
     ];
   };
 
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "github.com" = {
+        hostname = "github.com";
+        user = "git";
+        identityFile = [ "~/.ssh/id_github" ];
+      };
+    };
+  };
+
   # ..and Programs go here.
   nixpkgs.config.allowUnfree = true;
   programs = {
@@ -27,7 +38,10 @@
     fish.enable = true;
     git = {
       enable = true;
-      settings.user.name = "mod_yuria";
+      settings = {
+        user.name = "yuria256";
+        user.email = "yuria@londor.dev";
+      };
     };
   };
 
