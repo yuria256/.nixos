@@ -20,7 +20,8 @@
     targets = {
       firefox.firefoxGnomeTheme.enable = true;
       firefox.profileNames = [ "default" ];
-      neovim.plugin = "base16-nvim";
+      vscode.enable = false;
+      neovim.plugin = "mini.base16";
     };
   };
 }
